@@ -4,18 +4,17 @@ from art import logo
 print(logo)
 user_input = input("Translate to Morse Code: ").upper()
 
-result = []
+code_message = []
 
 
 def cipher():
     try:
-        for char in user_input:
-
-            result.append(morse_code[char])
+        for letter in user_input:
+            code_message.append(morse_code[letter])
 
     except KeyError:
         print("Error, invalid input")
 
 
 cipher()
-print(' '.join(result))
+print(' '.join(code_message))
